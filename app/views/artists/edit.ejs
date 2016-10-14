@@ -1,0 +1,18 @@
+<ul class="breadcrumb">
+    <li><a href="/">Home</a> <span class="divider">/</span></li>
+    <li><a href="<%- pathTo.artists() %>">artists</a> <span class="divider">/</span></li>
+    <li class="active"><a href="#">Edit artist</a></li>
+</ul>
+
+<div class="page-header">
+    <h1>Edit artist</h1>
+</div>
+
+<% var form = formFor(artist, {action: pathTo.artist(artist), method: 'PUT', id: "artist-form", class: 'form-horizontal'}) %>
+<%- form.begin() %>
+<%- include _form %>
+<div class="form-actions">
+    <%- form.submit('<i class="icon-ok icon-white"></i> Update artist', {class: 'btn btn-primary'}) %> or
+    <%- linkTo('Cancel', pathTo.artist(artist), {class: 'btn'}) %>
+</div>
+<%- form.end() %>

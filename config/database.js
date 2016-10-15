@@ -1,11 +1,15 @@
 module.exports = 
   { "development":
-    { "driver":   "memory"
+    { "driver":   "mongoose"
+    , "url": "mongodb://samsunny95:sunny123@ds029486.mlab.com:29486/stopifydb"
     }
   , "test":
     { "driver":   "memory"
     }
   , "production":
-    { "url":   "mongodb://samsunny95:sunny123@ds029486.mlab.com:29486/stopifydb"
+    { "driver":   "memory"
+    , "url": "mongodb://samsunny95:sunny123@ds029486.mlab.com:29486/stopifydb"
     }
   };
+
+ /*  "url" : "mongodb://samsunny95:sunny123@ds029486.mlab.com:29486/stopifydb"  */

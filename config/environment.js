@@ -2,6 +2,7 @@ module.exports = function (compound) {
 
     var express = require('express');
     var app = compound.app;
+    require('./mongoose').init(compound);
 
     app.configure(function(){
         app.use(express.static('public'));

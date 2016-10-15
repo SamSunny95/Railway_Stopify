@@ -4,6 +4,7 @@ module.exports = function (compound) {
     var app = compound.app;
 
     app.configure(function(){
+        app.use(express.static('public'));
         app.use(express.static(app.root + '/public', { maxAge: 86400000 }));
         app.set('jsDirectory', '/javascripts/');
         app.set('cssDirectory', '/stylesheets/');
